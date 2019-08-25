@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Проект Test-Guru
 
-Things you may want to cover:
+Приложение позволяет пользователям проходить различные тесты и создавать их.
 
-* Ruby version
+* Ruby version 2.6.3
 
-* System dependencies
+* Rails version 6.0
 
-* Configuration
 
-* Database creation
+Список сущностей  проекта:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- вопрос
+- варианты ответов(будет содержать объекты класса Ответ)
+- ответ
+- тест (будет содержать объекты класса Вопрос)
+- пользователь (будет иметь различные группы доступа для создания или прохождения тестов)
+- отчет(будет формировать отчет по пройденному тесту)
