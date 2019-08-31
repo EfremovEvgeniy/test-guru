@@ -15,10 +15,10 @@ users = User.create!([{ name: 'Evgenii', email: 'efremoven94@gmail.com' },
                       { name: 'Nikolay', email: 'johne32rus23@gmail.com' },
                       { name: 'Kristina', email: 'example@admin.com' }])
 
-Answer.create! [{ body: 'Some text about hashes and arrays', correct: true, questions_id: questions.first.id },
-                { body: 'I don know ', questions_id: questions.second.id },
-                { body: 'Some text about HTML', correct: true, questions_id: questions.third.id },
-                { body: 'Wrong JOIN query', questions_id: questions.fourth.id },
-                { body: 'Some text about prock and lambda', questions_id: questions.fifth.id }]
+Answer.create! [{ body: 'Some text about hashes and arrays', correct: true, question_id: questions.first.id },
+                { body: 'I don know ', question_id: questions.second.id },
+                { body: 'Some text about HTML', correct: true, question_id: questions.third.id },
+                { body: 'Wrong JOIN query', question_id: questions.fourth.id },
+                { body: 'Some text about prock and lambda', question_id: questions.fifth.id }]
 
 users.first.tests.push(tests.first)
