@@ -5,11 +5,11 @@ tests = Test.create!([{ title: 'Ruby', level: 2, category_id: categories.second.
                       { title: 'HTML/CSS', level: 1, category_id: categories.first.id },
                       { title: 'SQL', level: 2, category_id: categories.third.id }])
 
-questions = Question.create! [{ body: 'Hashes and arrays', tests_id: tests.first.id },
-                              { body: 'What is style component?', tests_id: tests.second.id },
-                              { body: 'Difference between HTML4 and HTML5', tests_id: tests.third.id },
-                              { body: 'Write example of JOIN query', tests_id: tests.fourth.id },
-                              { body: 'Difference between lambda and prock', tests_id: tests.first.id }]
+questions = Question.create! [{ body: 'Hashes and arrays', test_id: tests.first.id },
+                              { body: 'What is style component?', test_id: tests.second.id },
+                              { body: 'Difference between HTML4 and HTML5', test_id: tests.third.id },
+                              { body: 'Write example of JOIN query', test_id: tests.fourth.id },
+                              { body: 'Difference between lambda and prock', test_id: tests.first.id }]
 
 users = User.create!([{ name: 'Evgenii', email: 'efremoven94@gmail.com' },
                       { name: 'Nikolay', email: 'johne32rus23@gmail.com' },
