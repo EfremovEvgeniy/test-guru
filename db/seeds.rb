@@ -21,8 +21,4 @@ Answer.create! [{ body: 'Some text about hashes and arrays', correct: true, ques
                 { body: 'Wrong JOIN query', questions_id: questions.fourth.id },
                 { body: 'Some text about prock and lambda', questions_id: questions.fifth.id }]
 
-UserTest.create! [{ users_id: users.first.id, tests_id: tests.first.id },
-                  { users_id: users.second.id, tests_id: tests.first.id },
-                  { users_id: users.third.id, tests_id: tests.first.id, passed: true },
-                  { users_id: users.third.id, tests_id: tests.second.id, passed: true },
-                  { users_id: users.third.id, tests_id: tests.third.id }]
+users.first.tests.push(tests.first)
