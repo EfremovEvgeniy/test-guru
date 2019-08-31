@@ -1,9 +1,9 @@
 categories = Category.create!([{ title: 'Frontend' }, { title: 'Backend' }, { title: 'Db' }])
 
-tests = Test.create!([{ title: 'Ruby', level: 2, categories_id: categories.second.id },
-                      { title: 'React', level: 1, categories_id: categories.first.id },
-                      { title: 'HTML/CSS', level: 1, categories_id: categories.first.id },
-                      { title: 'SQL', level: 2, categories_id: categories.third.id }])
+tests = Test.create!([{ title: 'Ruby', level: 2, category_id: categories.second.id },
+                      { title: 'React', level: 1, category_id: categories.first.id },
+                      { title: 'HTML/CSS', level: 1, category_id: categories.first.id },
+                      { title: 'SQL', level: 2, category_id: categories.third.id }])
 
 questions = Question.create! [{ body: 'Hashes and arrays', tests_id: tests.first.id },
                               { body: 'What is style component?', tests_id: tests.second.id },
