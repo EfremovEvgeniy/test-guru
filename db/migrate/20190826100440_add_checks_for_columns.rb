@@ -10,8 +10,8 @@ class AddChecksForColumns < ActiveRecord::Migration[6.0]
     change_column_null :users, :email, false
     change_column_null :categories, :title, false
 
-    add_reference :answers, :questions, foreign_key: true
-    add_reference :questions, :tests, foreign_key: true
-    add_reference :tests, :categories, foreign_key: true
+    add_reference :answers, :question, foreign_key: true
+    add_reference :questions, :test, foreign_key: true
+    add_reference :tests, :category, foreign_key: true
   end
 end
