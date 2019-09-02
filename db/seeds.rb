@@ -16,7 +16,15 @@ questions = Question.create! [{ body: 'Hashes and arrays', test: tests[0] },
                               { body: 'Difference between lambda and prock', test: tests[0] }]
 
 Answer.create! [{ body: 'Some text about hashes and arrays', correct: true, question: questions[0] },
-                { body: 'I don know ', question: questions[1] },
+                { body: 'Second answer ', question: questions[0] },
+                { body: 'Third answer ', question: questions[0] },
+                { body: 'Fourth answer ', question: questions[0] },
                 { body: 'Some text about HTML', correct: true, question: questions[2] },
                 { body: 'Wrong JOIN query', question: questions[3] },
                 { body: 'Some text about prock and lambda', question: questions[4] }]
+
+users[0].tests.push(tests[2])
+users[1].tests.push(tests[0])
+users[2].tests.push(tests[0])
+users[2].tests.push(tests[1])
+users[2].tests.push(tests[2])

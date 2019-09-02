@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20_190_831_100_916) do
     t.integer 'author_id'
     t.index ['author_id'], name: 'index_tests_on_author_id'
     t.index ['category_id'], name: 'index_tests_on_category_id'
+    t.index %w[title level], name: 'index_tests_on_title_and_level', unique: true
   end
 
   create_table 'tests_users', id: false, force: :cascade do |t|
