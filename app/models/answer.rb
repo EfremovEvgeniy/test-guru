@@ -2,9 +2,9 @@ class Answer < ApplicationRecord
   belongs_to :question
 
   validates :body, presence: true
-  validate :count_answers_for_question, on: :update
+  validate :count_answers_for_question, on: :create
 
-  scope :only_correct, -> { where(correct: true) }
+  scope :correct, -> { where(correct: true) }
 
   private
 
