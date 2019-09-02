@@ -13,5 +13,7 @@ class AddChecksForColumns < ActiveRecord::Migration[6.0]
     add_reference :answers, :question, foreign_key: true
     add_reference :questions, :test, foreign_key: true
     add_reference :tests, :category, foreign_key: true
+
+    add_index :tests, %i[title level], unique: true
   end
 end
