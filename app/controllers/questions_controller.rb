@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index show]
+  before_action :find_test, only: %i[index show create]
   before_action :find_question, only: %i[destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
@@ -25,7 +25,8 @@ class QuestionsController < ApplicationController
 
   def create
     # POST /tests/:test_id/questions
-    question = Test.find(params[:test_id]).questions.build(question_params).save
+    # question = Test.find(params[:test_id]).questions.build(question_params).save
+    question = @test.questions.build(question_params).save
     render plain: question.inspect
   end
 
