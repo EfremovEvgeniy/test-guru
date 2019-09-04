@@ -26,8 +26,13 @@ class QuestionsController < ApplicationController
   def create
     # POST /tests/:test_id/questions
     # question = Test.find(params[:test_id]).questions.build(question_params).save
-    question = @test.questions.build(question_params).save
-    render plain: question.inspect
+    if @test.questions.build(question_params).save
+      redirect_to test_questions_path(@test)
+    else
+      redirect_to new_test_question(@test)
+    end
+
+    # render plain: question.inspect
   end
 
   def destroy
