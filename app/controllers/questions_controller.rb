@@ -1,7 +1,11 @@
 class QuestionsController < ApplicationController
+  before_action :find_test, only: %i[index show]
+  before_action :find_question, only: %i[destroy]
+
+  rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
   def index
     #  GET  /tests/:test_id/questions(.:format)
-    @questions = Test.find(params[:test_id]).questions
+    @questions = @test.questions
     respond_to do |format|
       format.html
       format.xml  { render xml: @questions }
@@ -11,22 +15,40 @@ class QuestionsController < ApplicationController
 
   def show
     # GET /tests/:test_id/questions/:id
-    question = Test.find(params[:test_id]).questions.where('questions.id = ?', params[:id])
+    question = @test.questions.where('questions.id = ?', params[:id])
     render xml: question
   end
 
   def new
-    # GET    /tests/:test_id/questions/new(.:format)
-    # render plain: 'give me form for create new test '
+    # GET /tests/:test_id/questions/new(.:format)
   end
 
   def create
-    # POST  /tests/:test_id/questions
-    render plain: 'post form from user to server'
+    # POST /tests/:test_id/questions
+    question = Test.find(params[:test_id]).questions.build(question_params).save
+    render plain: question.inspect
   end
 
   def destroy
     # DELETE /questions/:id(.:format)
-    render plain: 'delete question'
+    @question.destroy
+  end
+
+  private
+
+  def question_params
+    params.require(:question).permit(:body)
+  end
+
+  def find_test
+    @test = Test.find(params[:test_id])
+  end
+
+  def rescue_with_question_not_found
+    render plain: 'Question not found'
+  end
+
+  def find_question
+    @question = Question.find(params[:id])
   end
 end
