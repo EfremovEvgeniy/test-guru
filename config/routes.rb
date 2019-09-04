@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :tests, only: [] do # временная опция, пока нет котроллера
-    resources :questions, only: %i[index show new create destroy] # ограничил тем, что нужно для ДЗ
+    resources :questions, shallow: true
   end
 end

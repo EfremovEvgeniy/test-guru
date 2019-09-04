@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index show create]
-  before_action :find_question, only: %i[destroy]
+  before_action :find_test, only: %i[index create]
+  before_action :find_question, only: %i[destroy show]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
   def index
@@ -14,9 +14,8 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    # GET /tests/:test_id/questions/:id
-    question = @test.questions.where('questions.id = ?', params[:id])
-    render xml: question
+    # GET /questions/:id
+    render json: @question
   end
 
   def new
@@ -25,14 +24,11 @@ class QuestionsController < ApplicationController
 
   def create
     # POST /tests/:test_id/questions
-    # question = Test.find(params[:test_id]).questions.build(question_params).save
     if @test.questions.build(question_params).save
       redirect_to test_questions_path(@test)
     else
       redirect_to new_test_question(@test)
     end
-
-    # render plain: question.inspect
   end
 
   def destroy
