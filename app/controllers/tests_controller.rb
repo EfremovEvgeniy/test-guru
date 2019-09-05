@@ -27,7 +27,8 @@ class TestsController < ApplicationController
   end
 
   def create
-    @test = Test.create(params[:test])
+    # POST   /tests(.:format)
+    @test = Test.create(test_params)
 
     if @test.save
       redirect_to @test
@@ -44,5 +45,9 @@ class TestsController < ApplicationController
 
   def rescue_with_test_not_found
     render plain: 'Test not found'
+  end
+
+  def test_params
+    params.require(:test).permit(:title, :level, :author_id, :category_id)
   end
 end

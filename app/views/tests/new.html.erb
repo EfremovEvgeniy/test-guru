@@ -6,7 +6,7 @@
       <h2><%= pluralize(@test.errors.count, 'error') %> detected:</h2>
 
       <ul>
-        <% @test.erorrs.full_messages.each do |message| %>
+        <% @test.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>
       </ul>
@@ -21,6 +21,16 @@
   <p>
     <%= form.label :level %><br>
     <%= form.text_field :level %>
+  </p><br>
+
+  <p>
+    <%= form.label :category_id %><br>
+    <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true %>
+  </p><br>
+
+  <p>
+    <%= form.label :author_id %><br>
+    <%= form.collection_select :author_id, User.all, :id, :name, prompt: true %>
   </p><br>
 
   <p><%= form.submit %></p>
