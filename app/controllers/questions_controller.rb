@@ -22,6 +22,7 @@ class QuestionsController < ApplicationController
   def new
     # GET /tests/:test_id/questions/new(.:format)
     @test
+    @question = Question.new()
   end
 
   def create
@@ -29,7 +30,7 @@ class QuestionsController < ApplicationController
     if @test.questions.build(question_params).save
       redirect_to test_questions_path(@test)
     else
-      redirect_to new_test_question(@test)
+      render :new
     end
   end
 
