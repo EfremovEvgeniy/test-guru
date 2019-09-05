@@ -3,7 +3,7 @@ class QuestionsController < ApplicationController
   before_action :find_question, only: %i[destroy show]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
-  
+
   def index
     #  GET  /tests/:test_id/questions(.:format)
     @questions = @test.questions
@@ -16,13 +16,16 @@ class QuestionsController < ApplicationController
 
   def show
     # GET /questions/:id
-    render json: @question
+    respond_to do |format|
+      format.html
+      format.json { render json: @question }
+    end
   end
 
   def new
     # GET /tests/:test_id/questions/new(.:format)
     @test
-    @question = Question.new()
+    @question = Question.new
   end
 
   def create
