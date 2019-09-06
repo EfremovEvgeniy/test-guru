@@ -1,8 +1,6 @@
-<h1>Listing Questions</h1>
- 
-<table>
+ <table>
     <tr>
-      <th>Body</th>
+      <th>Questions body</th>
     </tr>
  
     <% @questions.each do |question| %>
@@ -14,4 +12,4 @@
  
 <br>
 
-<p><a href="/tests">All tests</a></p>
+<p><%= link_to 'All tests', tests_path %></p>

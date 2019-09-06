@@ -15,6 +15,7 @@ class TestsController < ApplicationController
 
   def show
     # GET    /tests/:id(.:format)
+    @questions = @test.questions
     respond_to do |format|
       format.html
       format.json { render json: @test }
@@ -28,7 +29,7 @@ class TestsController < ApplicationController
 
   def create
     # POST   /tests(.:format)
-    @test = Test.create(test_params)
+    @test = Test.new(test_params)
 
     if @test.save
       redirect_to @test
@@ -54,6 +55,7 @@ class TestsController < ApplicationController
   def destroy
     # DELETE /tests/:id(.:format)
     @test.destroy
+    redirect_to tests_path
   end
 
   private
