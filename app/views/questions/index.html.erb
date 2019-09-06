@@ -1,15 +1,9 @@
  <table>
     <tr>
       <th>Questions body</th>
+      <th colspan="2">Actions</th>
     </tr>
- 
-    <% @questions.each do |question| %>
-      <tr>
-        <td><%= question.body %></td>
-      </tr>
-    <% end %>
+    <%= render @questions %>
 </table>
- 
-<br>
 
 <p><%= link_to 'All tests', tests_path %></p>

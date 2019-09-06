@@ -24,8 +24,7 @@ class QuestionsController < ApplicationController
 
   def new
     # GET /tests/:test_id/questions/new(.:format)
-    @test
-    @question = Question.new
+    @question= @test.questions.build
   end
 
   def create
