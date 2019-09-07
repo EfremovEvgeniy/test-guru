@@ -12,4 +12,5 @@
     <th><%= render @test.questions %></th>
   </tr>
 </table>
+<p><%= link_to 'New question', new_test_question_path(@test.id) %></p>
 <p><%= link_to 'Back', tests_path %></p>

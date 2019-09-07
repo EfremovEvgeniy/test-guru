@@ -1,6 +1,8 @@
 <li>
+  <b>Answer body:</b>
   <%= answer.body %><br>
-  <%= link_to 'Show', answer_path(answer) %> |
+  <b>Correct?</b>
+  <%= answer.correct %><br>
   <%= link_to 'Edit', edit_answer_path(answer) %> |
 
   <%= link_to 'Delete',
@@ -8,4 +10,5 @@
               method: :delete,
               data: {confirm: 'Are you sure?'} %> 
 </li>
+
 

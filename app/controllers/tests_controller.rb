@@ -6,20 +6,11 @@ class TestsController < ApplicationController
   def index
     #  GET    /tests(.:format)
     @tests = Test.all
-    respond_to do |format|
-      format.html
-      format.xml  { render xml: @tests }
-      format.json { render json: @tests }
-    end
   end
 
   def show
     # GET    /tests/:id(.:format)
     @questions = @test.questions
-    respond_to do |format|
-      format.html
-      format.json { render json: @test }
-    end
   end
 
   def new
