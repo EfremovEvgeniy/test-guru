@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :tests, only: [] do # временная опция, пока нет котроллера
-    resources :questions, shallow: true
+  resources :tests do
+    resources :questions, shallow: true, except: :index
   end
 end
