@@ -7,13 +7,20 @@ class TestPassage < ApplicationRecord
 
   def accept!(answer_ids)
     self.correct_question += 1 if correct_answer?(answer_ids)
-
     self.current_question = next_question
     save!
   end
 
   def completed?
     current_question.nil?
+  end
+
+  def questions_count
+    test.questions.count
+  end
+
+  def percentage_correct_answers
+    (correct_question.to_f / test.questions.count * 100).to_i
   end
 
   private

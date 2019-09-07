@@ -1,5 +1,13 @@
 <h1>Passing the <%= @test_passage.test.title %> test</h1>
 
+<p>
+  Total questions in test: <%= @test_passage.questions_count %>
+</p>
+
+<!-- <p>
+  Question №<%= @test_passage.current_question.id %>
+</p> -->
+
 <b>
   <%= @test_passage.current_question.body %>
 </b>
@@ -14,3 +22,4 @@
 
   <p><%= form.submit 'Next' %></p>
 <% end %>
+<p><%= link_to 'Abort!', tests_path %></p>
