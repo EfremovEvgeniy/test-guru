@@ -22,9 +22,3 @@ Answer.create! [{ body: 'Some text about hashes and arrays', correct: true, ques
                 { body: 'Some text about HTML', correct: true, question: questions[2] },
                 { body: 'Wrong JOIN query', question: questions[3] },
                 { body: 'Some text about prock and lambda', question: questions[4] }]
-
-users[0].tests.push(tests[2])
-users[1].tests.push(tests[0])
-users[2].tests.push(tests[0])
-users[2].tests.push(tests[1])
-users[2].tests.push(tests[2])
