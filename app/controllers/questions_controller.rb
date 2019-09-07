@@ -1,18 +1,8 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index create new]
+  before_action :find_test, only: %i[create new]
   before_action :find_question, only: %i[destroy show edit update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
-
-  def index
-    #  GET  /tests/:test_id/questions(.:format)
-    @questions = @test.questions
-    respond_to do |format|
-      format.html
-      format.xml  { render xml: @questions }
-      format.json { render json: @questions }
-    end
-  end
 
   def show
     # GET /questions/:id
@@ -24,7 +14,7 @@ class QuestionsController < ApplicationController
 
   def new
     # GET /tests/:test_id/questions/new(.:format)
-    @question= @test.questions.build
+    @question = @test.questions.build
   end
 
   def create
@@ -53,6 +43,7 @@ class QuestionsController < ApplicationController
   def destroy
     # DELETE /questions/:id(.:format)
     @question.destroy
+    redirect_to tests_path
   end
 
   private

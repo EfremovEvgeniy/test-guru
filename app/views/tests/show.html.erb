@@ -7,4 +7,8 @@
   <strong>Level:</strong>
   <%= @test.level %>
 </p>
-<p><%= render template: 'questions/index' %></p>
+<table>
+  <tr>
+    <th><%= render @test.questions %></th>
+  </tr>
+</table>
