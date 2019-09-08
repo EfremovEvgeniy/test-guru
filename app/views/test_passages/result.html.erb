@@ -1,3 +1,11 @@
 <h1><%= @test_passage.test.title %> test was completed!</h1>
-<p><%= test_passages_result(@test_passage) %><p>
+<p>
+  <b>Result:</b>
+  <% if @test_passage.success? %>
+    You have great result: <span class="colortext-green"> <%= @test_passage.percentage_correct_answers %>% </span>
+  <% else %>
+    You have bad result, try again: <span class="colortext-red"> <%= @test_passage.percentage_correct_answers %>%</span>
+  <% end %>
+</p>
+
 <p><%= link_to 'All tests', tests_path %></p>

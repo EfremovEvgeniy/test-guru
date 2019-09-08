@@ -36,7 +36,7 @@ class TestsController < ApplicationController
   end
 
   def update
-    # PATCH /tests/:id
+    # PATCH  /tests/:id
     if @test.update(test_params)
       redirect_to @test
     else

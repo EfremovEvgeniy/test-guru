@@ -4,9 +4,9 @@
   Total questions in test: <%= @test_passage.questions_count %>
 </p>
 
-<!-- <p>
-  Question №<%= @test_passage.current_question.id %>
-</p> -->
+<p>
+  Question №<%= @test_passage.number_current_question %>
+</p>
 
 <b>
   <%= @test_passage.current_question.body %>
