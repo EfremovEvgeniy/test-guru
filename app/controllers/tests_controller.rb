@@ -1,25 +1,17 @@
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[show edit update destroy]
+  before_action :find_test, only: %i[show edit update destroy start]
+  before_action :find_user, only: %i[start]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
   def index
     #  GET    /tests(.:format)
     @tests = Test.all
-    respond_to do |format|
-      format.html
-      format.xml  { render xml: @tests }
-      format.json { render json: @tests }
-    end
   end
 
   def show
     # GET    /tests/:id(.:format)
     @questions = @test.questions
-    respond_to do |format|
-      format.html
-      format.json { render json: @test }
-    end
   end
 
   def new
@@ -44,7 +36,7 @@ class TestsController < ApplicationController
   end
 
   def update
-    # PATCH /tests/:id
+    # PATCH  /tests/:id
     if @test.update(test_params)
       redirect_to @test
     else
@@ -58,10 +50,20 @@ class TestsController < ApplicationController
     redirect_to tests_path
   end
 
+  def start
+    # POST   /tests/:id/start(.:format)
+    @user.tests.push(@test)
+    redirect_to @user.test_passage(@test)
+  end
+
   private
 
   def find_test
     @test = Test.find(params[:id])
+  end
+
+  def find_user
+    @user = User.first
   end
 
   def rescue_with_test_not_found

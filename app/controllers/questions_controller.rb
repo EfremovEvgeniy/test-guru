@@ -6,10 +6,6 @@ class QuestionsController < ApplicationController
 
   def show
     # GET /questions/:id
-    respond_to do |format|
-      format.html
-      format.json { render json: @question }
-    end
   end
 
   def new
@@ -20,7 +16,7 @@ class QuestionsController < ApplicationController
   def create
     # POST /tests/:test_id/questions
     if @test.questions.build(question_params).save
-      redirect_to test_questions_path(@test)
+      redirect_to test_path(@test)
     else
       render :new
     end
@@ -34,7 +30,7 @@ class QuestionsController < ApplicationController
   def update
     # PATCH /questions/:id
     if @question.update(question_params)
-      redirect_to @question
+      redirect_to test_path(@question.test)
     else
       render :edit
     end
@@ -43,7 +39,7 @@ class QuestionsController < ApplicationController
   def destroy
     # DELETE /questions/:id(.:format)
     @question.destroy
-    redirect_to tests_path
+    redirect_to test_path(@question.test)
   end
 
   private
