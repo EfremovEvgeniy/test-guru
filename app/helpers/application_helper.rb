@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def flash_message(type, message)
+    content_tag :p, message, class: "flash #{type}"
+  end
+
   def current_year
     Time.current.year
   end

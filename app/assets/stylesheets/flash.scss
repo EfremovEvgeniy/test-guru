@@ -3,8 +3,12 @@
     padding: 5px;
     border-radius: 5px;
     margin-block-start: 10px;
-}
 
-.flash.alert {
-  border-color: #ef2727;
+  &.alert {
+    border-color: #ef2727;
+  }
+
+  &.notice {
+    border-color: #3ddf2b;
+  }
 }
