@@ -64,7 +64,8 @@ class TestsController < ApplicationController
   end
 
   def find_user
-    @user = User.first
+    # @user = User.first
+    @user = User.find(cookies[:user_id])
   end
 
   def rescue_with_test_not_found
