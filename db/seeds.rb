@@ -1,8 +1,8 @@
 categories = Category.create!([{ title: 'Frontend' }, { title: 'Backend' }, { title: 'Db' }])
 
-users = User.create!([{ name: 'Evgenii', email: 'efremoven94@gmail.com' },
-                      { name: 'Nikolay', email: 'johne32rus23@gmail.com' },
-                      { name: 'Kristina', email: 'example@admin.com' }])
+users = User.create!([{ email: 'efremoven94@gmail.com', password: 'password' },
+                      { email: 'johne32rus23@gmail.com', password: 'password' },
+                      { email: 'example@admin.com', password: 'password' }])
 
 tests = Test.create!([{ title: 'Test for test', level: 2, category: categories[1], author: users[0] },
                       { title: 'React', level: 1, category: categories[0], author: users[1] },
