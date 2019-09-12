@@ -3,10 +3,10 @@
   <%= answer.body %><br>
   <b>Correct?</b>
   <%= answer.correct %><br>
-  <%= link_to 'Edit', edit_answer_path(answer) %> |
+  <%= link_to 'Edit', edit_admin_answer_path(answer) %> |
 
   <%= link_to 'Delete',
-              answer_path(answer), 
+              admin_answer_path(answer), 
               method: :delete,
               data: {confirm: 'Are you sure?'} %> 
 </li>

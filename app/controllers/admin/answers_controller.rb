@@ -1,42 +1,34 @@
-class AnswersController < ApplicationController
+class Admin::AnswersController < Admin::BaseController
   before_action :find_answer, only: %i[show edit update destroy]
   before_action :find_question, only: %i[new create]
 
-  def show
-    # GET    /answers/:id(.:format)
-  end
+  def show; end
 
   def new
-    # GET /questions/:question_id/answers/new(.:format)
     @answer = @question.answers.build
   end
 
-  def edit
-    # /answers/:id/edit
-  end
+  def edit; end
 
   def create
-    # POST   /questions/:question_id/answers
     if @question.answers.build(answer_params).save
-      redirect_to question_path(@question)
+      redirect_to admin_question_path(@question)
     else
       render :new
     end
   end
 
   def update
-    # PATCH /answers/:id
     if @answer.update(answer_params)
-      redirect_to @answer
+      redirect_to admin_question_path(@answer.question.id)
     else
       render :edit
     end
   end
 
   def destroy
-    # DELETE /answers/:id
     @answer.destroy
-    redirect_to @answer.question
+    redirect_to admin_question_path(@answer.question.id)
   end
 
   private

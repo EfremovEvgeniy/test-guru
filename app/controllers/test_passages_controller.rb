@@ -6,7 +6,6 @@ class TestPassagesController < ApplicationController
   def result; end
 
   def update
-    # /test_passages/:id
     @test_passage.accept!(params[:answer_ids])
     if @test_passage.completed?
       TestsMailer.completed_test(@test_passage).deliver_now
