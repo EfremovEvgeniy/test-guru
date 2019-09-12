@@ -20,6 +20,7 @@ class Admin::TestsController < Admin::BaseController
   def create
     # POST   /tests(.:format)
     @test = Test.new(test_params)
+    @test.author_id = current_user.id
 
     if @test.save
       redirect_to admin_tests_path
@@ -59,6 +60,6 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def test_params
-    params.require(:test).permit(:title, :level, :author_id, :category_id)
+    params.require(:test).permit(:title, :level, :category_id)
   end
 end
