@@ -1,0 +1,15 @@
+<p>
+  <strong>Question:</strong>
+  <%= @question.body %>
+</p>
+
+<p><b>Answers:</p></b>
+
+<%= link_to 'New answer', new_admin_question_answer_path(@question) %>
+
+<ol>
+  <%= render @question.answers %>
+</ol> 
+
+<p><%= link_to 'Back', admin_test_path(@question.test) %></p>
+
