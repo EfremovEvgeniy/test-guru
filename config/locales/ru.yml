@@ -1,0 +1,33 @@
+ru:
+  hello: "Привет мир!"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Изменить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Сложность"
+        category_id: "Категория"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Сложность"
+      questions: "Вопросы"
+      actions: "Действия"
+
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан"
+        delete_test: "Тест был успешно удален"
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Сложность"
+        questions: "Вопросы"
+        actions: "Действия"
