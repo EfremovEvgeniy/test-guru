@@ -1,5 +1,4 @@
 ru:
-  hello: "Привет мир!"
 
   helpers:
     submit:
@@ -9,6 +8,7 @@ ru:
       answer:
         create: "Создать ответ"
         update: "Изменить ответ"
+    
     label:
       test:
         title: "Название"
@@ -18,6 +18,11 @@ ru:
         body: "Ответ"
         correct: "Правильность"
 
+  layouts:
+    header:
+      welcome: "Добро пожаловать,"
+      logout: "Выход"
+
   tests:
     index:
       header: "Доступные тесты"
@@ -25,6 +30,23 @@ ru:
       level: "Сложность"
       questions: "Вопросы"
       actions: "Действия"
+    test:
+      start: "Старт"
+
+  test_passages:
+    show:
+      passing_test: "Прохождение теста"
+      question_number: "Вопрос №"
+      total_questions: "Всего вопросов:"
+      next: "Следующий вопрос"
+      abort: "Закончить!"
+    result:
+      completed_test: "был завершен"
+      result: "Ваш результат"
+      good: "У вас отличный результат!"
+      bad: "Вы плохо справились, попробуйте еще"
+      all_tests: "Все тесты"
+
 
   admin:
     tests:
@@ -76,14 +98,7 @@ ru:
         header: "Редактирование ответа"
         back: "Назад"
 
-
-
-
-
-
     nav:
       header: "Админ-панель TestGuru"
       welcome: "Привет,"
       logout: "Выход"
-
-

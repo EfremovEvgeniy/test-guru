@@ -1,5 +1,4 @@
 en:
-  hello: "Hello world"
 
   helpers:
     submit:
@@ -15,8 +14,14 @@ en:
         level: "Level"
         category_id: "Category"
       answer:
-        body: "Ответ"
-        correct: "Правильность"
+        body: "Answer"
+        correct: "Correct"
+
+  layouts:
+    header:
+      welcome: "Welcome,"
+      logout: "Logout"
+
 
   tests:
     index:
@@ -25,6 +30,22 @@ en:
       level: "Level"
       questions: "Questions count"
       actions: "Actions"
+    test:
+      start: "Start"
+
+  test_passages:
+    show:
+      passing_test: "Passinr the test"
+      question_number: "Question №"
+      total_questions: "Total questions:"
+      next: "Next"
+      abort: "Abort"
+    result:
+      completed_test: "was completed"
+      result: "Result"
+      good: "You have great result!"
+      bad: "You have bad result, try again"
+      all_tests: "All tests"
 
   admin:
     tests:
@@ -73,7 +94,6 @@ en:
       edit:
         header: "Editing Answer"
         back: "Back"
-
 
     nav:
       header: "TestGuru admin panel"

@@ -1,11 +1,14 @@
-<h1><%= @test_passage.test.title %> test was completed!</h1>
+<h1><%= @test_passage.test.title %>  <%= t('.completed_test') %> </h1>
 <p>
-  <b>Result:</b>
+  <b><%= t('.result') %></b>
   <% if @test_passage.success? %>
-    You have great result: <span class="colortext-green"> <%= @test_passage.percentage_correct_answers %>% </span>
+     <span class="colortext-green"> <%= @test_passage.percentage_correct_answers %>% </span>
+     <%= t('.good') %>
   <% else %>
-    You have bad result, try again: <span class="colortext-red"> <%= @test_passage.percentage_correct_answers %>%</span>
+      <span class="colortext-red"> 
+        <%= @test_passage.percentage_correct_answers %>%</span>
+     <%= t('.bad') %>
   <% end %>
 </p>
 
-<p><%= link_to 'All tests', tests_path %></p>
+<p><%= link_to t('.all_tests'), tests_path %></p>
