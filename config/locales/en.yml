@@ -19,7 +19,7 @@ en:
 
   layouts:
     header:
-      welcome: "Welcome,"
+      welcome: "Welcome, %{user_email}"
       logout: "Logout"
 
 
@@ -35,13 +35,13 @@ en:
 
   test_passages:
     show:
-      passing_test: "Passinr the test"
-      question_number: "Question №"
-      total_questions: "Total questions:"
+      passing_test: "Passinr the test '%{title}'"
+      question_number: "Question № %{current_question} "
+      total_questions: "Total questions: %{total}"
       next: "Next"
       abort: "Abort"
     result:
-      completed_test: "was completed"
+      completed_test: "Test '%{title}' was completed"
       result: "Result"
       good: "You have great result!"
       bad: "You have bad result, try again"

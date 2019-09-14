@@ -1,4 +1,4 @@
-<h1><%= @test_passage.test.title %>  <%= t('.completed_test') %> </h1>
+<h1><%= t('.completed_test', title: @test_passage.test.title ) %></h1>
 <p>
   <b><%= t('.result') %></b>
   <% if @test_passage.success? %>

@@ -1,13 +1,11 @@
-<h1><%= t('.passing_test') %></h1>
-
-<p><%= @test_passage.test.title %></p>
+<h1><%= t('.passing_test', title: @test_passage.test.title ) %></h1>
 
 <p>
-  <%= t('.total_questions') %><%= @test_passage.questions_count %>
+  <%= t('.total_questions', total: @test_passage.questions_count) %>
 </p>
 
 <p>
-  <%= t('.question_number') %><%= @test_passage.number_current_question %>
+  <%= t('.question_number', current_question: @test_passage.number_current_question) %>
 </p>
 
 <b>
