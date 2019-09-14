@@ -6,14 +6,17 @@ en:
       test:
         create: "Create test"
         update: "Update test"
+      answer:
+        create: "Создать ответ"
+        update: "Изменить ответ"
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
-    # collection_select:
-    #   test:
-    #     category_id: "Please select"
+      answer:
+        body: "Ответ"
+        correct: "Правильность"
 
   tests:
     index:
@@ -36,6 +39,42 @@ en:
         questions: "Questions count"
         actions: "Actions"
         new_test: "New test"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        sure? : "Are you sure?"
+      show:
+        title: "Test title"
+        level: "Level"
+        new_question: "New question"
+        back: "Back"
+    questions:
+      question:
+        show_answers: "Show answers"
+        edit: "Edit"
+        delete: "Delete"
+        sure? : "Are you sure?"
+      show:
+        question_body: "Question"
+        answers: "Answers"
+        new_answer: "New answer"
+        back: "Back"
+    answers:
+      answer: 
+        body: "Answer"
+        correct?: "Correct?"
+        edit: "Edit"
+        delete: "Delete"
+        sure? : "Are you sure?"
+      new:
+        header: "New answer"
+        back: "Back"
+      edit:
+        header: "Editing Answer"
+        back: "Back"
+
+
     nav:
       header: "TestGuru admin panel"
       welcome: "Welcome,"

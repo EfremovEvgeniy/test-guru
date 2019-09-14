@@ -6,15 +6,17 @@ ru:
       test:
         create: "Создать тест"
         update: "Изменить тест"
+      answer:
+        create: "Создать ответ"
+        update: "Изменить ответ"
     label:
       test:
         title: "Название"
         level: "Сложность"
         category_id: "Категория"
-
-    # collection_select:
-    #   test:
-    #     category_id: "Выберите"
+      answer:
+        body: "Ответ"
+        correct: "Правильность"
 
   tests:
     index:
@@ -42,6 +44,43 @@ ru:
         edit: "Изменить"
         delete: "Удалить"
         sure? : "Вы уверены?"
+      show:
+        title: "Название теста"
+        level: "Сложность"
+        new_question: "Создать вопрос"
+        back: "Назад"
+      edit:
+        edit_test: "Редактирование теста"
+    questions:
+      question:
+        show_answers: "Показать ответы"
+        edit: "Изменить"
+        delete: "Удалить"
+        sure? : "Вы уверены?"
+      show:
+        question_body: "Вопрос"
+        answers: "Ответы"
+        new_answer: "Создать ответ"
+        back: "Назад"
+    answers:
+      answer: 
+        body: "Ответ"
+        correct?: "Правильный?"
+        edit: "Изменить"
+        delete: "Удалить"
+        sure? : "Вы уверены?"
+      new:
+        header: "Новый ответ"
+        back: "Назад"
+      edit:
+        header: "Редактирование ответа"
+        back: "Назад"
+
+
+
+
+
+
     nav:
       header: "Админ-панель TestGuru"
       welcome: "Привет,"
