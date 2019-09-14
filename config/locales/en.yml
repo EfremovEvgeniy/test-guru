@@ -17,6 +17,12 @@ en:
         body: "Answer"
         correct: "Correct"
 
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
   layouts:
     header:
       welcome: "Welcome, %{user_email}"
@@ -97,5 +103,8 @@ en:
 
     nav:
       header: "TestGuru admin panel"
-      welcome: "Welcome,"
+      welcome: "Welcome, %{user_email}"
       logout: "Logout"
+  tests_mailer:
+    completed_test:
+      subject: "You just completed TestGuru test"

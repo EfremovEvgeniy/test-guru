@@ -18,6 +18,14 @@ ru:
         body: "Ответ"
         correct: "Правильность"
 
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
   layouts:
     header:
       welcome: "Добро пожаловать, %{user_email}"
@@ -100,5 +108,8 @@ ru:
 
     nav:
       header: "Админ-панель TestGuru"
-      welcome: "Привет,"
+      welcome: "Привет, %{user_email}"
       logout: "Выход"
+  tests_mailer:
+      completed_test:
+        subject: "Вы прошли тест на TestGuru"
