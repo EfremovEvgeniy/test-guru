@@ -16,6 +16,8 @@ en:
       answer:
         body: "Answer"
         correct: "Correct"
+    select:
+      prompt: "Select!"
 
   shared:
     errors:
@@ -76,6 +78,8 @@ en:
         level: "Level"
         new_question: "New question"
         back: "Back"
+      new:
+        header: "New test"
     questions:
       question:
         show_answers: "Show answers"
@@ -108,3 +112,10 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed TestGuru test"
+  devise:
+    sessions:
+      new:
+        header: "Login"
+    registrations:
+      new:
+        header: "Sign up"
