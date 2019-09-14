@@ -11,6 +11,9 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+    # collection_select:
+    #   test:
+    #     category_id: "Please select"
 
   tests:
     index:
@@ -24,6 +27,7 @@ en:
     tests:
       create:
         success: "Test was successfully created"
+      destroy:
         delete_test: "Test was successfully deleted"
       index:
         header: "Listing tests"
@@ -31,3 +35,8 @@ en:
         level: "Level"
         questions: "Questions count"
         actions: "Actions"
+        new_test: "New test"
+    nav:
+      header: "TestGuru admin panel"
+      welcome: "Welcome,"
+      logout: "Logout"

@@ -12,6 +12,10 @@ ru:
         level: "Сложность"
         category_id: "Категория"
 
+    # collection_select:
+    #   test:
+    #     category_id: "Выберите"
+
   tests:
     index:
       header: "Доступные тесты"
@@ -24,6 +28,7 @@ ru:
     tests:
       create:
         success: "Тест успешно создан"
+      destroy:
         delete_test: "Тест был успешно удален"
       index:
         header: "Доступные тесты"
@@ -31,3 +36,15 @@ ru:
         level: "Сложность"
         questions: "Вопросы"
         actions: "Действия"
+        new_test: "Создать тест"
+      test:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        sure? : "Вы уверены?"
+    nav:
+      header: "Админ-панель TestGuru"
+      welcome: "Привет,"
+      logout: "Выход"
+
+
