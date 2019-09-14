@@ -1,0 +1,127 @@
+ru:
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Изменить тест"
+      answer:
+        create: "Создать ответ"
+        update: "Изменить ответ"
+    select:
+      prompt: "Выбирай!"
+    
+    label:
+      test:
+        title: "Название"
+        level: "Сложность"
+        category_id: "Категория"
+      answer:
+        body: "Ответ"
+        correct: "Правильность"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружено %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  layouts:
+    header:
+      welcome: "Добро пожаловать, %{user_email}"
+      logout: "Выход"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title: "Название"
+      level: "Сложность"
+      questions: "Вопросы"
+      actions: "Действия"
+    test:
+      start: "Старт"
+
+  test_passages:
+    show:
+      passing_test: "Прохождение теста '%{title}'"
+      question_number: "Вопрос № %{current_question} "
+      total_questions: "Всего вопросов: %{total}"
+      next: "Следующий вопрос"
+      abort: "Закончить!"
+    result:
+      completed_test: "Тест '%{title}' был завершен"
+      result: "Ваш результат"
+      good: "У вас отличный результат!"
+      bad: "Вы плохо справились, попробуйте еще"
+      all_tests: "Все тесты"
+
+
+  admin:
+    tests:
+      create:
+        success: "Тест успешно создан"
+      destroy:
+        delete_test: "Тест был успешно удален"
+      index:
+        header: "Доступные тесты"
+        title: "Название"
+        level: "Сложность"
+        questions: "Вопросы"
+        actions: "Действия"
+        new_test: "Создать тест"
+      test:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        sure? : "Вы уверены?"
+      show:
+        title: "Название теста"
+        level: "Сложность"
+        new_question: "Создать вопрос"
+        back: "Назад"
+      edit:
+        edit_test: "Редактирование теста"
+      new:
+        header: "Новый тест"
+    questions:
+      question:
+        show_answers: "Показать ответы"
+        edit: "Изменить"
+        delete: "Удалить"
+        sure? : "Вы уверены?"
+      show:
+        question_body: "Вопрос"
+        answers: "Ответы"
+        new_answer: "Создать ответ"
+        back: "Назад"
+    answers:
+      answer: 
+        body: "Ответ"
+        correct?: "Правильный?"
+        edit: "Изменить"
+        delete: "Удалить"
+        sure? : "Вы уверены?"
+      new:
+        header: "Новый ответ"
+        back: "Назад"
+      edit:
+        header: "Редактирование ответа"
+        back: "Назад"
+
+    nav:
+      header: "Админ-панель TestGuru"
+      welcome: "Привет, %{user_email}"
+      logout: "Выход"
+  tests_mailer:
+      completed_test:
+        subject: "Вы прошли тест на TestGuru"
+  devise:
+    sessions:
+      new:
+        header: "Вход"
+    registrations:
+      new:
+        header: "Регистрация"
+
