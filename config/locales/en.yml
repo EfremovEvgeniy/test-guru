@@ -29,6 +29,8 @@ en:
     header:
       welcome: "Welcome, %{user_email}"
       logout: "Logout"
+      login: "Sign in"
+      signup: "Sign up"
 
 
   tests:

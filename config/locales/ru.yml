@@ -32,6 +32,8 @@ ru:
     header:
       welcome: "Добро пожаловать, %{user_email}"
       logout: "Выход"
+      login: "Вход"
+      signup: "Регистрация"
 
   tests:
     index:
