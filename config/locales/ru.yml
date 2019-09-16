@@ -113,7 +113,7 @@ ru:
         back: "Назад"
 
     nav:
-      header: "Админ-панель TestGuru"
+      header: "Админ-панель"
       welcome: "Привет, %{user_email}"
       logout: "Выход"
   tests_mailer:

@@ -1,13 +1,9 @@
-<div id="push"></div>
-<footer class="footer">
-  <div class="container">
-    <nav>
-      <ul>
-        <li><%= current_year %></li>
-        <li><%= github_author('EfremovEvgeniy') %></li>
-        <li><%= github_url('EfremovEvgeniy', 'test-guru') %></li>
-        <li><%= link_to "Учебный проект в онлайн-школе Thinknetica", 'https://thinknetica.com', target: '_blank' %></li>
-      </ul>
-    </nav>
-  </div>
-</footer>
+<div class="fixed-bottom row-fluid">
+    <footer class="container">  
+      <p class="float-right">@<%= current_year %></p>
+        <p><%= github_author('EfremovEvgeniy') %> |
+          <a><%= github_url('EfremovEvgeniy', 'test-guru') %></a> |
+          <a><%= link_to "Учебный проект в онлайн-школе Thinknetica", 'https://thinknetica.com', target: '_blank' %></a>
+        </p>
+    </footer>
+</div>

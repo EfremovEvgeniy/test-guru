@@ -108,7 +108,7 @@ en:
         back: "Back"
 
     nav:
-      header: "TestGuru admin panel"
+      header: "Admin panel"
       welcome: "Welcome, %{user_email}"
       logout: "Logout"
   tests_mailer:
