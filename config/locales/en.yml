@@ -56,6 +56,9 @@ en:
       good: "You have great result!"
       bad: "You have bad result, try again"
       all_tests: "All tests"
+    gist:
+      success: "Gist saved"
+      failure: "Gist didn't save"
 
   admin:
     tests:
