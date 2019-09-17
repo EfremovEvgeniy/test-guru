@@ -1,6 +1,11 @@
 module ApplicationHelper
-  def flash_message(type, message)
-    content_tag :p, message, class: "flash #{type}"
+  def flash_class(level)
+    case level
+      when 'notice' then "alert alert-info"
+      when 'success' then "alert alert-success"
+      when 'error' then "alert alert-danger"
+      when 'alert' then "alert alert-warning"
+    end
   end
 
   def current_year
