@@ -114,6 +114,12 @@ ru:
       edit:
         header: "Редактирование ответа"
         back: "Назад"
+  gists:
+    index:
+      header: "Все Gists"
+      question: "Вопросы"
+      back: "Назад"
+
 
     nav:
       header: "Админ-панель"

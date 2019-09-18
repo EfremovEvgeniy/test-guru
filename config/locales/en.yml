@@ -109,6 +109,11 @@ en:
       edit:
         header: "Editing Answer"
         back: "Back"
+  gists:
+    index:
+      header: "All Gists"
+      question: "Questions"
+      back: "Back"
 
     nav:
       header: "Admin panel"

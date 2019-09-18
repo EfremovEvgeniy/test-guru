@@ -21,4 +21,6 @@ Rails.application.routes.draw do
       end
     end
   end
+
+  resources :gists, only: :index, path: '/admin/gists'
 end
