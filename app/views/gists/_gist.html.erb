@@ -1,5 +1,5 @@
 <tr>
-  <td><%= link_to gist.question.body, admin_question_path(gist.question) %></td>
-  <td><%= link_to gist.url, gist.url %></td>
+  <td><%= link_to gist.question.body.slice(0..24), admin_question_path(gist.question) %></td>
+  <td><%= link_to gist.url.delete_prefix('https://gist.github.com/'), gist.url %></td>
   <td><%= gist.user.email %></td>
 </tr>
