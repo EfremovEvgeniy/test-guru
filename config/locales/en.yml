@@ -1,4 +1,7 @@
 en:
+  services:
+    gist_question_service:
+      description: "Tests question from %{title} TestGuru"
 
   helpers:
     submit:
@@ -50,6 +53,7 @@ en:
       total_questions: "Total questions: %{total}"
       next: "Next"
       abort: "Abort"
+      save_to_gist: "Save to Gist"
     result:
       completed_test: "Test '%{title}' was completed"
       result: "Result"
@@ -57,7 +61,7 @@ en:
       bad: "You have bad result, try again"
       all_tests: "All tests"
     gist:
-      success: "Gist saved"
+      success: "Gist saved, link %{link_to_gists}"
       failure: "Gist didn't save"
 
   admin:

@@ -1,4 +1,7 @@
 ru:
+  services:
+    gist_question_service:
+      description: "Вопрос теста %{title} от TestGuru"
 
   helpers:
     submit:
@@ -52,6 +55,7 @@ ru:
       total_questions: "Всего вопросов: %{total}"
       next: "Следующий вопрос"
       abort: "Закончить!"
+      save_to_gist: "Сохранить в Gist"
     result:
       completed_test: "Тест '%{title}' был завершен"
       result: "Ваш результат"
@@ -59,7 +63,7 @@ ru:
       bad: "Вы плохо справились, попробуйте еще"
       all_tests: "Все тесты"
     gist:
-      success: "Gist успешно сохранен"
+      success: "Gist успешно сохранен, ссылка %{link_to_gists}"
       failure: "Gist не сохранился!"
 
 
@@ -137,7 +141,4 @@ ru:
       new:
         header: "Регистрация"
 
-  services:
-    gist_question_service:
-      question_from: "Вопрос теста "
 
