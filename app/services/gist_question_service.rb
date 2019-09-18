@@ -11,9 +11,10 @@ class GistQuestionService
 
   private
 
+
   def gist_params
     {
-      description: "Question from #{@test.title}",
+      description: "#{t('question_for')} #{@test.title}",
       public: true,
       files: { 'test-guru-question.txt' => {
         content: gist_content

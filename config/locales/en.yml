@@ -109,11 +109,6 @@ en:
       edit:
         header: "Editing Answer"
         back: "Back"
-  gists:
-    index:
-      header: "All Gists"
-      question: "Questions"
-      back: "Back"
 
     nav:
       header: "Admin panel"
@@ -122,6 +117,13 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed TestGuru test"
+
+  gists:
+    index:
+      header: "All Gists"
+      question: "Questions"
+      back: "Back"
+      
   devise:
     sessions:
       new:
@@ -129,3 +131,4 @@ en:
     registrations:
       new:
         header: "Sign up"
+
