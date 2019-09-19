@@ -1,0 +1,13 @@
+<h2><%= t('.header') %></h2>
+
+<table>
+    <tr>
+      <th><%= t('.question') %></th>
+      <th>Url</th>
+      <th>Email</th>
+    </tr>
+    <%= render @gists %>
+</table>
+
+<p><%= link_to t('.back'), admin_tests_path %></p>
+ 

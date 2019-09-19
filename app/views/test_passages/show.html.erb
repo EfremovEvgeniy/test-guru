@@ -22,4 +22,6 @@
 
   <p><%= form.submit t('.next') %></p>
 <% end %>
+
+<p><%= link_to t('.save_to_gist'), gist_test_passage_path(@test_passage), method: :post %></p>
 <p><%= link_to t('.abort'), tests_path %></p>
