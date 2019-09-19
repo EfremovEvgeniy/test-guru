@@ -1,7 +1,7 @@
 class GistQuestionService
   require 'dotenv/load'
 
-  attr_reader :service
+  attr_reader :response
 
   def initialize(question, client: default_client)
     @question = question
@@ -10,11 +10,11 @@ class GistQuestionService
   end
 
   def call
-    @service = @client.create_gist(gist_params)
+    @response = @client.create_gist(gist_params)
   end
 
   def success?
-    @service[:html_url].present?
+    @response[:html_url].present?
   end
 
   private

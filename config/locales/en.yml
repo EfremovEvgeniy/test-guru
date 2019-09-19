@@ -61,7 +61,7 @@ en:
       bad: "You have bad result, try again"
       all_tests: "All tests"
     gist:
-      success: "Gist saved, link %{link_to_gists}"
+      success: "Gist saved! Link %{url}"
       failure: "Gist didn't save"
 
   admin:

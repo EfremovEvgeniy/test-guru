@@ -63,7 +63,7 @@ ru:
       bad: "Вы плохо справились, попробуйте еще"
       all_tests: "Все тесты"
     gist:
-      success: "Gist успешно сохранен, ссылка %{link_to_gists}"
+      success: "Gist успешно сохранен! Ссылка %{url}"
       failure: "Gist не сохранился!"
 
 
