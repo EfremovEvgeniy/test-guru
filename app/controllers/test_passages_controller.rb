@@ -30,8 +30,6 @@ class TestPassagesController < ApplicationController
     redirect_to @test_passage
   end
 
- 
-
   private
 
   def find_test_passage

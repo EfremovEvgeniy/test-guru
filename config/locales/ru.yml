@@ -80,6 +80,7 @@ ru:
         questions: "Вопросы"
         actions: "Действия"
         new_test: "Создать тест"
+        all_gists: "Все Gists"
       test:
         show: "Показать"
         edit: "Изменить"

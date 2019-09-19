@@ -77,6 +77,7 @@ en:
         questions: "Questions count"
         actions: "Actions"
         new_test: "New test"
+        all_gists: "All gists"
       test:
         show: "Show"
         edit: "Edit"
