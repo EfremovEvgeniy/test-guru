@@ -16,7 +16,6 @@ function sortRowsByTitle() {
   for (var i = 1; i < rows.length; i++) {
     sortedRows.push(rows[i])
   }
-  // var arrowUp = this.querySelector('.octicon-arrow-up')
 
   if (this.querySelector('.octicon-arrow-up').classList.contains('hide')) {
     sortedRows.sort(compareRowsAsc)

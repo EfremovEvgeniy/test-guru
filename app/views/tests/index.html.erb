@@ -3,9 +3,15 @@
 </div> 
 <div class="row justify-content-center">
   <div class="col col-md-4">
-    <table>
+    <table class="table">
         <tr>
-          <th><span class="badge badge-pill badge-info"><%= t('.title') %></span></th>
+          <th class="sort-by-title pointer">
+            <span class="badge badge-pill badge-info">
+              <%= t('.title') %>
+              <%= octicon 'arrow-up', class: 'text-success hide' %>
+              <%= octicon 'arrow-down', class: 'text-success hide' %>
+            </span>
+          </th>
           <th><span class="badge badge-pill badge-info"><%= t('.level') %></span></th>
           <th><span class="badge badge-pill badge-info"><%= t('.questions') %></span></th>
           <th><span class="badge badge-pill badge-info"><%= t('.actions') %></span></th>
