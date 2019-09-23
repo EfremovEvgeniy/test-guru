@@ -28,7 +28,9 @@ gem 'jbuilder', '~> 2.7'
 # UI
 
 gem 'bootstrap', '~> 4.3'
+gem 'bootstrap-sass'
 gem 'jquery-rails'
+gem 'octicons_helper'
 
 # auth
 
