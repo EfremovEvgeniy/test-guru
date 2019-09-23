@@ -95,6 +95,8 @@ ru:
         edit_test: "Редактирование теста"
       new:
         header: "Новый тест"
+      form_inline:
+        submit: "Ok"
     questions:
       question:
         show_answers: "Показать ответы"

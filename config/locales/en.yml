@@ -90,6 +90,8 @@ en:
         back: "Back"
       new:
         header: "New test"
+      form_inline:
+        submit: "Ok"
     questions:
       question:
         show_answers: "Show answers"

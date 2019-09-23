@@ -12,6 +12,7 @@ require("popper.js")
 // require("bootsrtap-sprockets")
 require("utilities/sorting.js")
 require("utilities/compare_passwords.js")
+require("utilities/form_inline.js")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
