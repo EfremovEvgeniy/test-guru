@@ -56,6 +56,7 @@ ru:
       next: "Следующий вопрос"
       abort: "Закончить!"
       save_to_gist: "Сохранить в Gist"
+      progress: 'Ваш прогресс'
     result:
       completed_test: "Тест '%{title}' был завершен"
       result: "Ваш результат"

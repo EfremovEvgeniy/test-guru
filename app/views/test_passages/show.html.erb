@@ -1,5 +1,4 @@
 <h1><%= t('.passing_test', title: @test_passage.test.title ) %></h1>
-
 <p>
   <%= t('.total_questions', total: @test_passage.questions_count) %>
 </p>
@@ -8,11 +7,16 @@
   <%= t('.question_number', current_question: @test_passage.number_current_question) %>
 </p>
 
+<%= content_tag :div, t('.progress'), class: 'progress-bar',
+                role: 'progressbar',
+                data: {percent: @test_passage.current_stage_percent} %>
+
 <b>
   <%= @test_passage.current_question.body %>
 </b>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
+
   <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :body, include_hidden: false do |b| %>
   <p>
     <%= b.check_box id: "answer_ids_#{b.object.id}" %>

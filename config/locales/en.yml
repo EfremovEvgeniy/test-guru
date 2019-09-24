@@ -54,6 +54,7 @@ en:
       next: "Next"
       abort: "Abort"
       save_to_gist: "Save to Gist"
+      progress: "Your progress"
     result:
       completed_test: "Test '%{title}' was completed"
       result: "Result"
