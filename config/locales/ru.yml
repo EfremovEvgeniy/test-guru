@@ -92,6 +92,7 @@ ru:
         level: "Сложность"
         new_question: "Создать вопрос"
         back: "Назад"
+        edit: "Изменить"
       edit:
         edit_test: "Редактирование теста"
       new:

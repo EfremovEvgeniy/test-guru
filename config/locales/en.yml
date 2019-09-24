@@ -89,6 +89,7 @@ en:
         level: "Level"
         new_question: "New question"
         back: "Back"
+        edit: "Edit"
       new:
         header: "New test"
       form_inline:
