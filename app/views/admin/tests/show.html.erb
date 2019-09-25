@@ -12,5 +12,6 @@
     <ol><%= render @test.questions %></ol>
   </tr>
 </table>
+<p><%= link_to t('.edit'), edit_admin_test_path(@test) %></p>
 <p><%= link_to t('.new_question'), new_admin_test_question_path(@test.id) %></p>
 <p><%= link_to t('.back'), admin_tests_path %></p>

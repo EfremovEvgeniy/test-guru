@@ -56,6 +56,7 @@ ru:
       next: "Следующий вопрос"
       abort: "Закончить!"
       save_to_gist: "Сохранить в Gist"
+      progress: 'Ваш прогресс'
     result:
       completed_test: "Тест '%{title}' был завершен"
       result: "Ваш результат"
@@ -91,10 +92,13 @@ ru:
         level: "Сложность"
         new_question: "Создать вопрос"
         back: "Назад"
+        edit: "Изменить"
       edit:
         edit_test: "Редактирование теста"
       new:
         header: "Новый тест"
+      form_inline:
+        submit: "Ok"
     questions:
       question:
         show_answers: "Показать ответы"

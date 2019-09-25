@@ -32,6 +32,10 @@ class TestPassage < ApplicationRecord
     test.questions.where('id < ?', current_question.id).count + 1
   end
 
+  def current_stage_percent
+    number_current_question.to_f / questions_count * 100
+  end
+
   private
 
   def before_save_set_next_question
