@@ -1,5 +1,5 @@
 class GistQuestionService
-  require 'dotenv/load'
+  # require 'dotenv/load'
 
   attr_reader :response
 
