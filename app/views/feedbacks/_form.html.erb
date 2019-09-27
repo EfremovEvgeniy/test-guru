@@ -6,10 +6,10 @@
 
   <p>
     <%= form.label :text %><br>
-    <%= form.text_field :text %>
+    <%= form.text_area :text %>
   </p><br>
 
   <p><%= form.submit %></p>
 
 <% end %>
-<p><%= link_to 'Back', root_path %></p>
+<p><%= link_to t('.back'), root_path %></p>

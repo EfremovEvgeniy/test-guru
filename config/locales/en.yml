@@ -34,6 +34,14 @@ en:
       logout: "Logout"
       login: "Sign in"
       signup: "Sign up"
+    footer:
+      feedback: "Feedback"
+
+  feedbacks:
+    new:
+      title: "New feedback"
+    form:
+      back: "Back"
 
 
   tests:
@@ -66,6 +74,11 @@ en:
       failure: "Gist didn't save"
 
   admin:
+    feedbacks:
+      index:
+        title: "All feedbacks"
+        back: "Back"
+        text: "Text"
     tests:
       create:
         success: "Test was successfully created"
@@ -79,6 +92,7 @@ en:
         actions: "Actions"
         new_test: "New test"
         all_gists: "All gists"
+        all_feedbacks: "All feedbacks"
       test:
         show: "Show"
         edit: "Edit"
