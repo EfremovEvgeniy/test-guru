@@ -3,6 +3,7 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :gists, dependent: :destroy
   has_many :his_tests, foreign_key: 'author_id', class_name: 'Test'
+  has_many :feedbacks, dependent: :destroy
 
   devise  :database_authenticatable,
           :registerable,
