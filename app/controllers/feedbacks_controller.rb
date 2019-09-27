@@ -11,6 +11,7 @@ class FeedbacksController < ApplicationController
     else
       Feedback.create(feedback_params)
     end
+    FeedbacksMailer.send_feedback(feedback_params).deliver_now
     redirect_to root_path
   end
 
