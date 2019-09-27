@@ -1,0 +1,15 @@
+<%= form_with model: @feedback, local: true do |form| %>
+  <p>
+    <%= form.label :email %><br>
+    <%= form.text_field :email %>
+  </p><br>
+
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_field :text %>
+  </p><br>
+
+  <p><%= form.submit %></p>
+
+<% end %>
+<p><%= link_to 'Back', root_path %></p>

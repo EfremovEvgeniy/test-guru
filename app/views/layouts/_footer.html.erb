@@ -1,7 +1,8 @@
 <div class="fixed-bottom row-fluid">
     <footer class="container">  
       <p class="float-right">@<%= current_year %></p>
-        <p><%= github_author('EfremovEvgeniy') %> |
+        <p><%= link_to "Feedback", new_feedback_path %> |
+          <%= github_author('EfremovEvgeniy') %> |
           <a><%= github_url('EfremovEvgeniy', 'test-guru') %></a> |
           <a><%= link_to "Учебный проект в онлайн-школе Thinknetica", 'https://thinknetica.com', target: '_blank' %></a>
         </p>
