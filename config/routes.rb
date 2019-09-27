@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :feedback, only: %i[index show]
     resources :tests, exept: :index do
       patch :update_inline, on: :member
       resources :questions, shallow: true, except: :index do
@@ -24,4 +25,6 @@ Rails.application.routes.draw do
   end
 
   resources :gists, only: :index, path: '/admin/gists'
+
+  resources :feedback, only: %i[new create]
 end
