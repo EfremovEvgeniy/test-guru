@@ -23,6 +23,12 @@ ru:
         body: "Ответ"
         correct: "Правильность"
 
+  feedbacks:
+    new:
+      title: "Новый отзыв"
+    form:
+      back: "Назад"
+
   shared:
     errors:
       header:
@@ -37,6 +43,8 @@ ru:
       logout: "Выход"
       login: "Вход"
       signup: "Регистрация"
+    footer:
+      feedback: "Оставить отзыв"
 
   tests:
     index:
@@ -82,6 +90,7 @@ ru:
         actions: "Действия"
         new_test: "Создать тест"
         all_gists: "Все Gists"
+        all_feedbacks: "Все отзывы"
       test:
         show: "Показать"
         edit: "Изменить"

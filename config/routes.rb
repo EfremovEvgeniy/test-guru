@@ -24,4 +24,6 @@ Rails.application.routes.draw do
   end
 
   resources :gists, only: :index, path: '/admin/gists'
+
+  resources :feedbacks, only: %i[new create]
 end

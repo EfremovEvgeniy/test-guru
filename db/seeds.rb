@@ -1,13 +1,9 @@
 categories = Category.create!([{ title: 'Frontend' }, { title: 'Backend' }, { title: 'Db' }])
 
-users = User.create!([{ email: 'efremoven94@gmail.com', password: 'password' },
-                      { email: 'johne32rus23@gmail.com', password: 'password' },
-                      { email: 'example@admin.com', password: 'password' }])
-
-tests = Test.create!([{ title: 'Test for test', level: 2, category: categories[1], author: users[0] },
-                      { title: 'React', level: 1, category: categories[0], author: users[1] },
-                      { title: 'HTML/CSS', level: 1, category: categories[0], author: users[0] },
-                      { title: 'SQL', level: 2, category: categories[2], author: users[0] }])
+tests = Test.create!([{ title: 'Test for test', level: 2, category: categories[1], author: User.find_by(type: 'Admin') },
+                      { title: 'React', level: 1, category: categories[0], author: User.find_by(type: 'Admin') },
+                      { title: 'HTML/CSS', level: 1, category: categories[0], author: User.find_by(type: 'Admin') },
+                      { title: 'SQL', level: 2, category: categories[2], author: User.find_by(type: 'Admin') }])
 
 questions = Question.create! [{ body: 'First question', test: tests[0] },
                               { body: 'Second question', test: tests[0] },
