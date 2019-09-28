@@ -6,13 +6,13 @@ class FeedbacksController < ApplicationController
   end
 
   def create
-    if user_signed_in?
-      current_user.feedbacks.build(feedback_params).save
+    @feedback = Feedback.new(feedback_params)
+    if @feedback.valid?
+      FeedbacksMailer.send_feedback(feedback_params).deliver_now
+      redirect_to root_path
     else
-      Feedback.create(feedback_params)
+      render :new
     end
-    FeedbacksMailer.send_feedback(feedback_params).deliver_now
-    redirect_to root_path
   end
 
   private
