@@ -77,11 +77,6 @@ ru:
 
 
   admin:
-    feedbacks:
-      index:
-        title: "Все отзывы"
-        back: "Назад"
-        text: "Текст отзыва"
     tests:
       create:
         success: "Тест успешно создан"
