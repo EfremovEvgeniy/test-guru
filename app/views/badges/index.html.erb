@@ -1,0 +1,32 @@
+<h2><%= t('.all_badges') %></h2>
+
+<%= render 'shared/errors', resource: @badge %>
+ 
+<table class="table">
+    <tr>
+      <th><%= t('.title') %></th>
+      <th><%= t('.image') %></th>
+      <th colspan="2"></th>
+    </tr>
+    <%= render @badges %>
+</table>
+
+
+<h2><%= t('.your_badges') %></h2>
+
+<% if current_user.badges.empty? %>
+  <p>У вас нет бейджей</p>
+<% else %>
+<table class="table">
+  <tr>
+    <th><%= t('.title') %></th>
+    <th><%= t('.image') %></th>
+    <th colspan="2"></th>
+  </tr>
+  <%= render current_user.badges %>
+</table>
+<% end %>
+
+
+
+<p><%= link_to t('.back'), root_path %></p>
