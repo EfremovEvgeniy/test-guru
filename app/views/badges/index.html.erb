@@ -14,19 +14,19 @@
 
 <h2><%= t('.your_badges') %></h2>
 
-<% if current_user.badges.empty? %>
-  <p>У вас нет бейджей</p>
-<% else %>
 <table class="table">
   <tr>
     <th><%= t('.title') %></th>
-    <th><%= t('.image') %></th>
+    <th><%= t('.count') %></th>
     <th colspan="2"></th>
   </tr>
-  <%= render current_user.badges %>
+    <% current_user.badges.group(:title).count.each do |title, count| %>
+      <tr>
+        <td class="align-middle"><%= title %></td>
+        <td class="align-middle"><%= count %></td>
+      </tr> 
+    <% end %>
 </table>
-<% end %>
-
 
 
 <p><%= link_to t('.back'), root_path %></p>
