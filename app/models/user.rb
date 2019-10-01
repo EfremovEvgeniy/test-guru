@@ -25,4 +25,8 @@ class User < ApplicationRecord
   def admin?
     is_a?(Admin)
   end
+
+  def count_badges_by_id(badge)
+    badges.where(id: badge.id).count
+  end
 end
