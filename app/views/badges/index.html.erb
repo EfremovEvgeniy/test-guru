@@ -6,27 +6,10 @@
     <tr>
       <th><%= t('.title') %></th>
       <th><%= t('.image') %></th>
-      <th colspan="2"></th>
+      <th><%= t('.count') %></th>
+      <th colspan="3"></th>
     </tr>
     <%= render @badges %>
 </table>
-
-
-<h2><%= t('.your_badges') %></h2>
-
-<table class="table">
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.count') %></th>
-    <th colspan="2"></th>
-  </tr>
-    <% current_user.badges.group(:title).count.each do |title, count| %>
-      <tr>
-        <td class="align-middle"><%= title %></td>
-        <td class="align-middle"><%= count %></td>
-      </tr> 
-    <% end %>
-</table>
-
 
 <p><%= link_to t('.back'), root_path %></p>

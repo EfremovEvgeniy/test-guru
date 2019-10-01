@@ -3,4 +3,5 @@
     <%= content_tag :span, badge.title %>
   </td>
   <td class="align-middle"><%= image_tag("#{badge.image_url}") %></td>
+  <td class="align-middle"><%= current_user.badges.where(id: badge.id).count %></td>
 </tr>
