@@ -2,7 +2,7 @@ class Admin::BadgesController < Admin::BaseController
   before_action :find_badge, only: %i[edit update destroy]
 
   def index
-    @badges = Badges.all
+    @badges = Badge.all
   end
 
   def new
@@ -31,7 +31,7 @@ class Admin::BadgesController < Admin::BaseController
 
   def destroy
     @badge.destroy
-    redirect_to admin_tests_path
+    redirect_to admin_badges_path
   end
 
   private
