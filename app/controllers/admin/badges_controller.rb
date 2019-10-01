@@ -11,7 +11,7 @@ class Admin::BadgesController < Admin::BaseController
 
   def create
     if Badge.create(badge_params)
-      redirect_to admin_tests_path
+      redirect_to admin_badges_path
     else
       render :new
     end
@@ -23,7 +23,7 @@ class Admin::BadgesController < Admin::BaseController
 
   def update
     if @badge.update(badge_params)
-      redirect_to admin_tests_path
+      redirect_to admin_badges_path
     else
       render :edit
     end

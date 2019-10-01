@@ -2,7 +2,7 @@
   <td class="align-middle">
     <%= content_tag :span, badge.title %>
   </td>
-  <td class="align-middle"><%= badge.image_url %></td>
+  <td class="align-middle" calss="badge_image"><%= image_tag("#{badge.image_url}") %></td>
   <td class="align-middle"><%= badge.rule %></td>
   <td class="align-middle"><%= badge.param if badge.param.present? %></td>
   <td class="align-middle">
