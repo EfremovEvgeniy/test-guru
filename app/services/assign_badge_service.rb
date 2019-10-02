@@ -23,6 +23,10 @@ class AssignBadgeService
   end
 
   def assign_all_in_level?(level)
-    Test.all_by_level(level).to_ary == @user.tests.all_by_level(level).uniq
+    if Test.all_by_level(level).count == 1
+      Test.all_by_level(level).count == @user.tests.all_by_level(level).count
+    else 
+      Test.all_by_level(level).to_ary == @user.tests.all_by_level(level).uniq
+    end
   end
 end
