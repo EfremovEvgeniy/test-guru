@@ -10,10 +10,7 @@ class Test < ApplicationRecord
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 1 }
   validates :title, uniqueness: { scope: :level }
 
-  scope :easy, -> { where(level: 1) }
-  scope :medium, -> { where(level: 2..4) }
-  scope :hard, -> { where(level: 5..Float::INFINITY) }
-  scope :find_by_level, ->(level) { where(level: level) }
+  scope :find_by_level, ->(level) { where(level: level).order(:id) }
   scope :find_all_by_category, lambda { |category_name|
                                  joins(:category).where(
                                    categories: { title: category_name }
@@ -22,5 +19,9 @@ class Test < ApplicationRecord
 
   def self.all_by_category(category_name)
     find_all_by_category(category_name)
+  end
+
+  def self.all_by_level(level)
+    find_by_level(level.to_i)
   end
 end

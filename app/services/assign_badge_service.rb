@@ -15,7 +15,7 @@ class AssignBadgeService
 
   def assign_all_in_category?(category)
     TestPassage.find_by_user_and_test(@user.id, @test.id).count == 1 && \
-      Test.all_by_category(category).count == user_tests.all_by_category(category).uniq.count
+      Test.all_by_category(category).count == @user.tests.all_by_category(category).uniq.count
   end
 
   def assign_first_try_success?(_params)
@@ -23,10 +23,6 @@ class AssignBadgeService
   end
 
   def assign_all_in_level?(level)
-    Test.where(level: level.to_i).count == user_tests.where(level: level.to_i).count
-  end
-
-  def user_tests
-    @test_passage.user.tests
+    Test.all_by_level(level).to_ary == @user.tests.all_by_level(level).uniq
   end
 end
