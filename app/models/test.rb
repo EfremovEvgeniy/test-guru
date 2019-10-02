@@ -21,6 +21,6 @@ class Test < ApplicationRecord
                                }
 
   def self.all_by_category(category_name)
-    find_all_by_category(category_name).order(id: :desc).pluck(:title)
+    find_all_by_category(category_name)
   end
 end
