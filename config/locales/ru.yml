@@ -137,6 +137,13 @@ ru:
       header: "Админ-панель"
       welcome: "Привет, %{user_email}"
       logout: "Выход"
+
+    badges:
+      form:
+        all_in_category: "Все в категории!"
+        first_try_success: "С первой попытки"
+        all_in_level: "Все в уровне"
+        
   tests_mailer:
       completed_test:
         subject: "Вы прошли тест на TestGuru"

@@ -132,6 +132,13 @@ en:
       header: "Admin panel"
       welcome: "Welcome, %{user_email}"
       logout: "Logout"
+
+    badges:
+      form:
+        all_in_category: "All in category"
+        first_try_success: "First success try"
+        all_in_level: "All in level"
+
   tests_mailer:
     completed_test:
       subject: "You just completed TestGuru test"
