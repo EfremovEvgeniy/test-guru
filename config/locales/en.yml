@@ -34,6 +34,7 @@ en:
       logout: "Logout"
       login: "Sign in"
       signup: "Sign up"
+      user_badges: "Your badges"
     footer:
       feedback: "Feedback"
 
@@ -88,6 +89,7 @@ en:
         new_test: "New test"
         all_gists: "All gists"
         all_feedbacks: "All feedbacks"
+        all_badges: "All badges"
       test:
         show: "Show"
         edit: "Edit"
@@ -156,4 +158,12 @@ en:
     registrations:
       new:
         header: "Sign up"
+
+  badges:
+    index:
+      all_badges: "All badges"
+      title: "Title"
+      image: "Image"
+      count: "Count"
+      back: "Back"
 
