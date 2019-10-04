@@ -34,6 +34,7 @@ en:
       logout: "Logout"
       login: "Sign in"
       signup: "Sign up"
+      user_badges: "Your badges"
     footer:
       feedback: "Feedback"
 
@@ -88,6 +89,7 @@ en:
         new_test: "New test"
         all_gists: "All gists"
         all_feedbacks: "All feedbacks"
+        all_badges: "All badges"
       test:
         show: "Show"
         edit: "Edit"
@@ -132,6 +134,13 @@ en:
       header: "Admin panel"
       welcome: "Welcome, %{user_email}"
       logout: "Logout"
+
+    badges:
+      form:
+        all_in_category: "All in category"
+        first_try_success: "First success try"
+        all_in_level: "All in level"
+
   tests_mailer:
     completed_test:
       subject: "You just completed TestGuru test"
@@ -149,4 +158,12 @@ en:
     registrations:
       new:
         header: "Sign up"
+
+  badges:
+    index:
+      all_badges: "All badges"
+      title: "Title"
+      image: "Image"
+      count: "Count"
+      back: "Back"
 

@@ -1,6 +1,8 @@
 class User < ApplicationRecord
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
+  has_many :user_badges, dependent: :destroy
+  has_many :badges, through: :user_badges
   has_many :gists, dependent: :destroy
   has_many :his_tests, foreign_key: 'author_id', class_name: 'Test'
 
@@ -22,5 +24,9 @@ class User < ApplicationRecord
 
   def admin?
     is_a?(Admin)
+  end
+
+  def count_badges_by_id(badge)
+    badges.where(id: badge.id).count
   end
 end

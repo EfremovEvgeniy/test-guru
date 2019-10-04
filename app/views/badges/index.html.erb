@@ -1,0 +1,15 @@
+<h2><%= t('.all_badges') %></h2>
+
+<%= render 'shared/errors', resource: @badge %>
+ 
+<table class="table">
+    <tr>
+      <th><%= t('.title') %></th>
+      <th><%= t('.image') %></th>
+      <th><%= t('.count') %></th>
+      <th colspan="3"></th>
+    </tr>
+    <%= render @badges %>
+</table>
+
+<p><%= link_to t('.back'), root_path %></p>

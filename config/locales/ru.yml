@@ -43,6 +43,7 @@ ru:
       logout: "Выход"
       login: "Вход"
       signup: "Регистрация"
+      user_badges: "Ваши награды"
     footer:
       feedback: "Оставить отзыв"
 
@@ -91,6 +92,7 @@ ru:
         new_test: "Создать тест"
         all_gists: "Все Gists"
         all_feedbacks: "Все отзывы"
+        all_badges: "Все награды" 
       test:
         show: "Показать"
         edit: "Изменить"
@@ -137,6 +139,13 @@ ru:
       header: "Админ-панель"
       welcome: "Привет, %{user_email}"
       logout: "Выход"
+
+    badges:
+      form:
+        all_in_category: "Все в категории!"
+        first_try_success: "С первой попытки"
+        all_in_level: "Все в уровне"
+
   tests_mailer:
       completed_test:
         subject: "Вы прошли тест на TestGuru"
@@ -154,5 +163,13 @@ ru:
     registrations:
       new:
         header: "Регистрация"
+
+  badges:
+    index:
+      all_badges: "Все награды"
+      title: "Название"
+      image: "Награда"
+      count: "Количество"
+      back: "Назад"
 
 

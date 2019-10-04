@@ -1,11 +1,17 @@
 class TestPassage < ApplicationRecord
+  SUCCESS_PERCENTAGE = 85
+
   belongs_to :user
   belongs_to :test
   belongs_to :current_question, class_name: 'Question', optional: true
 
   before_save :before_save_set_next_question
 
-  SUCCESS_PERCENTAGE = 85
+  scope :by_user_and_test, ->(user_id, test_id) { where(user_id: user_id, test_id: test_id) }
+
+  def self.find_by_user_and_test(user_id, test_id)
+    by_user_and_test(user_id, test_id)
+  end
 
   def accept!(answer_ids)
     self.correct_question += 1 if correct_answer?(answer_ids)
