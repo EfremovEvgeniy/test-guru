@@ -25,12 +25,12 @@ class AssignBadgeService
   end
 
   def assign_all_in_level?(level)
-    if @test_passage.success?
-      if Test.all_by_level(level).count == 1
-        Test.all_by_level(level).count == @user.tests.all_by_level(level).count
-      else
-        Test.all_by_level(level).to_ary == @user.tests.all_by_level(level).uniq
-      end
+    return unless @test_passage.success? && @test.level == level.to_i
+
+    if Test.all_by_level(level).count == 1
+      @user.tests.all_by_level(level).count == 1
+    else
+      Test.all_by_level(level).to_ary == @user.tests.all_by_level(level).uniq
     end
   end
 end
