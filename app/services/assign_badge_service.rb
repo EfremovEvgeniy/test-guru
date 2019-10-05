@@ -14,10 +14,10 @@ class AssignBadgeService
   private
 
   def assign_all_in_category?(category)
-    if @test.category.title == category && @test_passage.success?
-      TestPassage.find_by_user_and_test(@user.id, @test.id).count == 1 &&
-        Test.all_by_category(category).count == @user.tests.all_by_category(category).uniq.count
-    end
+    return unless @test.category.title == category && @test_passage.success?
+
+    TestPassage.find_by_user_and_test(@user.id, @test.id).count == 1 &&
+      Test.all_by_category(category).count == @user.tests.all_by_category(category).uniq.count
   end
 
   def assign_first_try_success?(_params)
