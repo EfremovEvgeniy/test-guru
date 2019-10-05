@@ -16,6 +16,7 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+        timer: "Timer"
       answer:
         body: "Answer"
         correct: "Correct"
@@ -50,6 +51,7 @@ en:
       header: "Listing tests"
       title: "Title"
       level: "Level"
+      timer: "Time (min)"
       questions: "Questions count"
       actions: "Actions"
     test:

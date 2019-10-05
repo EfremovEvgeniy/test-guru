@@ -19,6 +19,7 @@ ru:
         title: "Название"
         level: "Сложность"
         category_id: "Категория"
+        timer: "Таймер"
       answer:
         body: "Ответ"
         correct: "Правильность"
@@ -52,6 +53,7 @@ ru:
       header: "Доступные тесты"
       title: "Название"
       level: "Сложность"
+      timer: "Время (мин)"
       questions: "Вопросы"
       actions: "Действия"
     test:

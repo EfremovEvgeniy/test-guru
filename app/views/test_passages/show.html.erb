@@ -1,9 +1,7 @@
 <h1><%= t('.passing_test', title: @test_passage.test.title ) %></h1>
 <% if @test_passage.test.timer? %>
-  <b>Осталось времени:
-    <%= content_tag :div, nil, class: 'timer', id: 'timer', data: { time: @test_passage.time_left } %>
+  <%= content_tag :div, nil, class: 'timer', id: 'timer', data: { time: @test_passage.time_left } %>
 <% end %>
-  </b>
 <p>
   <%= t('.total_questions', total: @test_passage.questions_count) %>
 </p>
