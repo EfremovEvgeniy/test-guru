@@ -1,6 +1,7 @@
 <tr>
   <td><%= test.title %></td>
   <td><%= test.level %></td>
+  <td><%= test.timer %></td>
   <td><%= number_of_questions(test) %></td>
   <td><%= link_to t('.start'), start_test_path(test), method: :post,  :class => "button btn btn-primary" %></td>
 </tr>
