@@ -29,4 +29,13 @@ class User < ApplicationRecord
   def count_badges_by_id(badge)
     badges.where(id: badge.id).count
   end
+
+  def success_tests(category_name)
+    category_id = Category.find_by(title: category_name).id
+    success_user_tests = []
+    test_passages.each do |test_passage|
+      success_user_tests << test_passage if test_passage.success? && test_passage.test.category.id == category_id
+    end
+    success_user_tests.map!(&:test)
+  end
 end
