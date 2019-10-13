@@ -6,11 +6,4 @@ class Badge < ApplicationRecord
 
   validates :title, :image_url, :rule, presence: true
   validates :rule, uniqueness: { scope: :param }
-  validate :rule, :valid_rule?, on: :create
-
-  private
-
-  def valid_rule?
-    errors.add(:base, 'rule does not avaible') unless Badge::RULES.include? :rule
-  end
 end
